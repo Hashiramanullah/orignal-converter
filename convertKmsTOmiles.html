@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    /* width: 100%; */
+    height: 70vh;
+    background-color: cyan;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputBox{
+    margin-top: 10%;
+    /* width: 20%; */
+    /* height: 90px; */
+    background-color:#fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+
+}
+input{
+    outline: none;
+    border: none;
+font-size: 20px;
+}
+    button{
+        margin-top: 30px;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        background-color: chartreuse;
+        border-radius: 20px;
+        transition: 0.2s;
+    }
+    button:hover{
+        letter-spacing: 2px;
+        background-color: cadetblue;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="inputBox">
+            <input type="number" id="userKMs">
+
+        </div>
+    <button onclick="convert()">Convert</button>
+
+<h1 id="mileski"></h1>
+</div>
+</body>
+<script>
+    
+         function convert(){
+
+           let userKMs = document.getElementById('userKMs').value;
+           let kMS1 = 0.621371;
+           let miles = userKMs * kMS1;
+
+       let result = document.getElementById('mileski').innerText = `KmS is ${userKMs} and find Miles Is :${miles}`;
+
+
+         }
+
+
+</script>
+</html>
